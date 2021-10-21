@@ -1,0 +1,28 @@
+{
+	"name": "react-express-ts-template",
+	"private": "true",
+	"workspaces": [
+		"packages/*"
+	],
+	"version": "0.1.0",
+	"author": "Baatchia Riyadh",
+	"license": "MIT",
+	"devDependencies": {
+		"concurrently": "^6.3.0",
+		"cz-conventional-changelog": "3.3.0",
+		"lerna": "^4.0.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"scripts": {
+		"client": "yarn workspace @react-express-ts-template/client",
+		"server": "yarn workspace @react-express-ts-template/server",
+		"start": "concurrently \"yarn server start\" \"yarn client serve\"",
+		"start-watch": "concurrently \"yarn server start-watch\" \"yarn client start\" \"yarn server build-watch\"",
+		"start-watch-debug": "concurrently \"yarn server start-watch-debug\" \"yarn client start\" \"yarn server build-watch\"",
+		"release": "lerna version --conventional-commits --create-release github"
+	}
+}

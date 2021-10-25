@@ -17,18 +17,19 @@
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
 		"@typescript-eslint/parser": "^5.1.0",
 		"babel-jest": "^27.3.1",
+		"concurrently": "^6.3.0",
 		"eslint": "^8.0.1",
 		"jest": "^27.3.1",
 		"nodemon": "^2.0.14",
 		"typescript": "^4.4.4"
 	},
 	"scripts": {
-		"start": "node dist/index.js",
-		"start-debug": "node --inspect dist/index.js",
-		"start-watch": "nodemon dist/index.js",
-		"start-watch-debug": "nodemon --inspect dist/index.js",
 		"build": "tsc",
 		"build-watch": "tsc -w",
+		"start": "node dist/index.js",
+		"start-debug": "node --inspect dist/index.js",
+		"start-watch": "concurrently \"yarn build-watch\" \"nodemon --watch dist dist/index.js\"",
+		"start-watch-debug": "concurrently \"yarn build-watch\" \"nodemon --watch dist --inspect dist/index.js\"",
 		"test": "jest",
 		"test-watch": "jest --watchAll"
 	}

@@ -22,8 +22,8 @@
 		"server": "yarn workspace @react-express-ts-template/server",
 		"build": "concurrently \"yarn server build\" \"yarn client build\"",
 		"start": "concurrently \"yarn server start\" \"yarn client serve\"",
-		"start-watch": "concurrently \"yarn server start-watch\" \"yarn client start\" \"yarn server build-watch\"",
-		"start-watch-debug": "concurrently \"yarn server start-watch-debug\" \"yarn client start\" \"yarn server build-watch\"",
+		"start-watch": "concurrently \"yarn server start-watch\" \"yarn client start\"",
+		"start-watch-debug": "concurrently \"yarn server start-watch-debug\" \"yarn client start\"",
 		"release": "lerna version --conventional-commits --create-release github"
 	}
 }

@@ -28,8 +28,8 @@
 		"build-watch": "tsc -w",
 		"start": "node dist/index.js",
 		"start-debug": "node --inspect dist/index.js",
-		"start-watch": "concurrently \"yarn build-watch\" \"nodemon --watch dist dist/index.js\"",
-		"start-watch-debug": "concurrently \"yarn build-watch\" \"nodemon --watch dist --inspect dist/index.js\"",
+		"start-watch": "concurrently \"nodemon --watch dist dist/index.js\" \"yarn build-watch\" -i --names \"serve,build\"",
+		"start-watch-debug": "concurrently \"nodemon --watch dist --inspect dist/index.js\" \"yarn build-watch\" -i --names \"serve,build\"",
 		"test": "jest",
 		"test-watch": "jest --watchAll"
 	}

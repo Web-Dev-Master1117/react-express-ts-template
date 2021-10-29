@@ -20,10 +20,10 @@
 	"scripts": {
 		"client": "yarn workspace @react-express-ts-template/client",
 		"server": "yarn workspace @react-express-ts-template/server",
-		"build": "concurrently \"yarn server build\" \"yarn client build\"",
-		"start": "concurrently \"yarn server start\" \"yarn client serve\"",
-		"start-watch": "concurrently \"yarn server start-watch\" \"yarn client start\"",
-		"start-watch-debug": "concurrently \"yarn server start-watch-debug\" \"yarn client start\"",
+		"build": "concurrently \"yarn server build\" \"yarn client build\" --names \"server,client\"",
+		"start": "concurrently \"yarn server start\" \"yarn client serve\" --names \"server,client\"",
+		"start-watch": "concurrently \"yarn server start-watch\" \"yarn client start\" -i --names \"server,client\"",
+		"start-watch-debug": "concurrently \"yarn server start-watch-debug\" \"yarn client start\" -i --names \"server,client\"",
 		"release": "lerna version --conventional-commits --create-release github"
 	}
 }

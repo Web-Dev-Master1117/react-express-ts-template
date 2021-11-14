@@ -10,7 +10,8 @@
 	"devDependencies": {
 		"concurrently": "^6.3.0",
 		"cz-conventional-changelog": "3.3.0",
-		"lerna": "^4.0.0"
+		"lerna": "^4.0.0",
+		"prettier": "^2.4.1"
 	},
 	"config": {
 		"commitizen": {
@@ -26,6 +27,7 @@
 		"start-concurrent": "concurrently \"yarn server start\" \"yarn client serve\" --names \"server,client\"",
 		"start-watch": "concurrently \"yarn server start-watch\" \"yarn client start\" -i --names \"server,client\"",
 		"start-watch-debug": "concurrently \"yarn server start-watch-debug\" \"yarn client start\" -i --names \"server,client\"",
+		"format-code": "prettier . --write --ignore-unknown",
 		"release": "lerna version --conventional-commits --create-release github"
 	}
 }

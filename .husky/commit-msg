@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yellow='\033[0;33m'
+no_color='\033[0m'
+
+echo -e "\n${yellow}Check commit msg spelling:${no_color}"
+FORCE_COLOR=1 yarn -s cspell --show-suggestions --relative --no-summary $1

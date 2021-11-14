@@ -4,5 +4,5 @@
 yellow='\033[0;33m'
 no_color='\033[0m'
 
-echo -e "${yellow}Lintting and Formatting:${no_color}"
+echo -e "${yellow}Linting Formatting and Spell Checking:${no_color}"
 FORCE_COLOR=1 yarn -s lint-staged -v -p true

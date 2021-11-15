@@ -3,5 +3,5 @@
 		"prettier --write --ignore-unknown",
 		"cspell --show-suggestions --relative"
 	],
-	"*.{ts,tsx}": "eslint --fix --max-warnings 1"
+	"*.{ts,tsx}": "eslint --fix --max-warnings 0"
 }

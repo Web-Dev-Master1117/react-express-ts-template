@@ -1,7 +1,10 @@
 import express from 'express';
+import helmet from 'helmet';
 import path from 'path';
 const app = express();
 const port = 4000;
+
+app.use(helmet({ contentSecurityPolicy: false }));
 
 app.get('/api', (req, res) => {
 	res.send('Hello World!');

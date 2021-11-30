@@ -5,7 +5,8 @@
 	"author": "Baatchia Riyadh",
 	"license": "MIT",
 	"dependencies": {
-		"express": "^4.17.1"
+		"express": "^4.17.1",
+		"helmet": "^4.6.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.15.8",
